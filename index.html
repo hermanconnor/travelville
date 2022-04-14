@@ -30,6 +30,7 @@
   </head>
 
   <body>
+    <!-- NAVBAR -->
     <div class="navbar-fixed">
       <nav class="teal">
         <div class="container">
@@ -49,6 +50,7 @@
         </div>
       </nav>
     </div>
+    <!-- end Navbar -->
     <!-- SIDENAV -->
     <ul id="mobile-nav" class="side-nav">
       <li><a href="#home">Home</a></li>
@@ -57,6 +59,119 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <!-- end SideNav -->
+    <main>
+      <!-- SLIDER -->
+      <section class="slider">
+        <ul class="slides">
+          <li>
+            <img
+              src="img/resort1.jpg"
+              alt="chairs under umbrellas on the beach"
+            />
+            <div class="caption center-align">
+              <h2>Take Your Dream Vacation</h2>
+              <h5 class="light grey-text text-lighten-3 hide-on-small-only">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos quo sequi iste quasi consequuntur facilis.
+              </h5>
+              <a href="#" class="btn btn-large">Learn More</a>
+            </div>
+          </li>
+          <li>
+            <img
+              src="img/resort2.jpg"
+              alt="chairs under umbrellas on the beach"
+            />
+            <div class="caption left-align">
+              <h2>We Work With All Budgets</h2>
+              <h5 class="light grey-text text-lighten-3 hide-on-small-only">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos quo sequi iste quasi consequuntur facilis.
+              </h5>
+              <a href="#" class="btn btn-large">Learn More</a>
+            </div>
+          </li>
+          <li>
+            <img
+              src="img/resort3.jpg"
+              alt="chairs under umbrellas on the beach"
+            />
+            <div class="caption right-align">
+              <h2>Group & Individual Getaways</h2>
+              <h5 class="light grey-text text-lighten-3 hide-on-small-only">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos quo sequi iste quasi consequuntur facilis.
+              </h5>
+              <a href="#" class="btn btn-large">Learn More</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- end Slider -->
+
+      <!-- SEARCH -->
+      <section class="section section-search teal darken-1 white-text center">
+        <div class="container">
+          <div class="row">
+            <div class="col s12">
+              <h3>Search Destinations</h3>
+              <div class="input-field">
+                <input
+                  type="text"
+                  name="autocomplete-input"
+                  id="autocomplete-input"
+                  class="white grey-text autocomplete"
+                  placeholder="Jamaica, St. Lucia, etc..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end Search -->
+
+      <!-- ICON BOXES -->
+      <section class="section grey lighten-4 center section-icons">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text">room</i>
+                <h4>Pick Where</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, blanditiis!
+                </p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text">store</i>
+                <h4>Travel Shop</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, blanditiis!
+                </p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large teal-text"
+                  >airplanemode_active</i
+                >
+                <h4>Fly Cheap</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Architecto, blanditiis!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end Icon Boxes -->
+    </main>
 
     <!--Import jQuery before materialize.js-->
     <script
@@ -68,7 +183,30 @@
       $(document).ready(function () {
         // Custom JS & jQuery here
 
+        // SideNav
         $('.button-collapse').sideNav();
+
+        // Slider
+        $('.slider').slider({
+          indicators: false,
+          height: 500,
+          transition: 500,
+          interval: 6000,
+        });
+
+        // Autocomplete
+        $('.autocomplete').autocomplete({
+          data: {
+            Aruba: null,
+            Bahamas: null,
+            California: null,
+            'Cancun Mexico': null,
+            'Costa Rica': null,
+            Europe: null,
+            Hawaii: null,
+            Jamaica: null,
+          },
+        });
       });
     </script>
   </body>
